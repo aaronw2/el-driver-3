@@ -1,0 +1,369 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:L L1
+U 1 1 5FF2A9AC
+P 3700 2200
+F 0 "L1" V 3890 2200 50  0000 C CNN
+F 1 "220uH" V 3799 2200 50  0000 C CNN
+F 2 "Inductor_SMD:L_Bourns_SRN8040TA" H 3700 2200 50  0001 C CNN
+F 3 "~" H 3700 2200 50  0001 C CNN
+	1    3700 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Aaron:MIC4832 U1
+U 1 1 5FF2E929
+P 3150 2700
+F 0 "U1" H 2900 3100 50  0000 C CNN
+F 1 "MIC4832" H 3350 2350 50  0000 C CNN
+F 2 "Package_DFN_QFN:DFN-8-1EP_3x3mm_P0.5mm_EP1.66x2.38mm" H 1850 2300 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/MIC4832-Low-Noise-220VPP-EL-Driver-DS20006163A.pdf" H 3150 2700 50  0001 C CNN
+F 4 "MIC4832YMM" H 1400 2100 50  0001 C CNN "MPN"
+F 5 "LED Lighting Drivers 220Vpp Low Noise EL Driver" H 2100 2200 50  0001 C CNN "Desc"
+F 6 "998-MIC4832YMM" H 2050 2100 50  0001 C CNN "SPN"
+F 7 "Mouser" H 2600 2100 50  0001 C CNN "SPL"
+	1    3150 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Diode:BAS20 D1
+U 1 1 5FF3053A
+P 4000 2200
+F 0 "D1" H 4000 1983 50  0000 C CNN
+F 1 "BAS20" H 4000 2074 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4000 2025 50  0001 C CNN
+F 3 "https://www.diodes.com/assets/Datasheets/Ds12004.pdf" H 4000 2200 50  0001 C CNN
+	1    4000 2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3850 2200 3850 2500
+Wire Wire Line
+	3850 2500 3650 2500
+Connection ~ 3850 2200
+Wire Wire Line
+	3550 2200 3150 2200
+Wire Wire Line
+	4150 2200 4150 2600
+Wire Wire Line
+	4150 2600 3650 2600
+Wire Wire Line
+	4500 2200 4150 2200
+Connection ~ 4150 2200
+$Comp
+L Device:C C1
+U 1 1 5FF334E1
+P 2200 2350
+F 0 "C1" H 2315 2396 50  0000 L CNN
+F 1 "2.2uF" H 2315 2305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2238 2200 50  0001 C CNN
+F 3 "~" H 2200 2350 50  0001 C CNN
+	1    2200 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2200 3150 2200
+Connection ~ 3150 2200
+Wire Wire Line
+	2200 2500 2200 3200
+Wire Wire Line
+	2200 3200 3150 3200
+$Comp
+L Device:R R3
+U 1 1 5FF351E7
+P 2450 2600
+F 0 "R3" V 2350 2600 50  0000 C CNN
+F 1 "332K" V 2450 2600 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2380 2600 50  0001 C CNN
+F 3 "~" H 2450 2600 50  0001 C CNN
+	1    2450 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5FF35A74
+P 2450 2800
+F 0 "R4" V 2350 2800 50  0000 C CNN
+F 1 "360K" V 2450 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2380 2800 50  0001 C CNN
+F 3 "~" H 2450 2800 50  0001 C CNN
+F 4 "Yageo" H 2450 2800 50  0001 C CNN "MFR"
+F 5 "RC0603FR-07360KL" H 2450 2800 50  0001 C CNN "MPN"
+	1    2450 2800
+	0    1    1    0   
+$EndComp
+Connection ~ 2200 2200
+Wire Wire Line
+	1750 2600 1750 2200
+$Comp
+L power:+5V #PWR01
+U 1 1 5FF36586
+P 950 2200
+F 0 "#PWR01" H 950 2050 50  0001 C CNN
+F 1 "+5V" H 965 2373 50  0000 C CNN
+F 2 "" H 950 2200 50  0001 C CNN
+F 3 "" H 950 2200 50  0001 C CNN
+	1    950  2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5FF3752A
+P 4500 2350
+F 0 "C2" H 4615 2396 50  0000 L CNN
+F 1 "0.01uF 250V" H 4615 2305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 4538 2200 50  0001 C CNN
+F 3 "https://api.kemet.com/component-edge/download/datasheet/C1206C103JAGACAUTO.pdf" H 4500 2350 50  0001 C CNN
+F 4 "KEMET" H 4500 2350 50  0001 C CNN "MFR"
+F 5 "C1206C103JAGACAUTO" H 4500 2350 50  0001 C CNN "MPN"
+F 6 "Mouser" H 4500 2350 50  0001 C CNN "SPR"
+F 7 "80-C1206C103JAGAUTO" H 4500 2350 50  0001 C CNN "SPN"
+F 8 "https://www.mouser.com/ProductDetail/KEMET/C1206C103JAGACAUTO/?qs=SABBhS%252B%252BUFWG6Xe2ZCbx%252BA%3D%3D" H 4500 2350 50  0001 C CNN "SPURL"
+F 9 "Multilayer Ceramic Capacitors MLCC - SMD/SMT 250V 0.01uF C0G 1206 5% AECQ200" H 4500 2350 50  0001 C CNN "DESC"
+	1    4500 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Transistor_FET:BSS214NW Q1
+U 1 1 5FF3809B
+P 2100 3400
+F 0 "Q1" H 2304 3446 50  0000 L CNN
+F 1 "BSS214NW" H 2304 3355 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 2300 3325 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 2100 3400 50  0001 L CNN
+	1    2100 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 2200 3200
+$Comp
+L Transistor_FET:BSS214NW Q2
+U 1 1 5FF39A72
+P 1350 3600
+F 0 "Q2" H 1554 3646 50  0000 L CNN
+F 1 "BSS214NW" H 1554 3555 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-323_SC-70" H 1550 3525 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/Infineon-BSS214NW-DS-v02_02-en.pdf?fileId=db3a30431b3e89eb011b695aebc01bde" H 1350 3600 50  0001 L CNN
+	1    1350 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 2200 1750 2200
+$Comp
+L Device:R R2
+U 1 1 5FF3C246
+P 1450 2350
+F 0 "R2" V 1350 2350 50  0000 C CNN
+F 1 "1M" V 1550 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1380 2350 50  0001 C CNN
+F 3 "~" H 1450 2350 50  0001 C CNN
+	1    1450 2350
+	-1   0    0    1   
+$EndComp
+Connection ~ 1450 2200
+Wire Wire Line
+	1450 2500 1450 3400
+Wire Wire Line
+	1900 3400 1450 3400
+Connection ~ 1450 3400
+$Comp
+L power:GND #PWR02
+U 1 1 5FF3CF31
+P 1450 3800
+F 0 "#PWR02" H 1450 3550 50  0001 C CNN
+F 1 "GND" H 1455 3627 50  0000 C CNN
+F 2 "" H 1450 3800 50  0001 C CNN
+F 3 "" H 1450 3800 50  0001 C CNN
+	1    1450 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 3800 2200 3800
+Wire Wire Line
+	2200 3800 2200 3600
+Connection ~ 1450 3800
+$Comp
+L Device:R R1
+U 1 1 5FF3D5C0
+P 1150 2350
+F 0 "R1" V 1050 2350 50  0000 C CNN
+F 1 "1M" V 1250 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1080 2350 50  0001 C CNN
+F 3 "~" H 1150 2350 50  0001 C CNN
+	1    1150 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1150 3600 1150 2500
+Wire Wire Line
+	1450 2200 1150 2200
+Connection ~ 1150 2200
+Wire Wire Line
+	4500 2500 4500 3200
+Wire Wire Line
+	4500 3200 3650 3200
+Connection ~ 3150 3200
+$Comp
+L Connector_Generic:Conn_01x02 J1
+U 1 1 5FF3F82D
+P 4900 2800
+F 0 "J1" H 4980 2792 50  0000 L CNN
+F 1 "Conn_01x02" H 4980 2701 50  0000 L CNN
+F 2 "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical" H 4900 2800 50  0001 C CNN
+F 3 "~" H 4900 2800 50  0001 C CNN
+	1    4900 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 2800 3650 2800
+Wire Wire Line
+	3650 2900 4700 2900
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5FF417E7
+P 750 3600
+F 0 "J2" H 668 3917 50  0000 C CNN
+F 1 "Conn_01x03" H 668 3826 50  0000 C CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 750 3600 50  0001 C CNN
+F 3 "~" H 750 3600 50  0001 C CNN
+	1    750  3600
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	950  3500 950  2200
+Wire Wire Line
+	950  2200 1150 2200
+Wire Wire Line
+	950  3600 1150 3600
+Connection ~ 1150 3600
+Wire Wire Line
+	950  3700 950  3800
+Wire Wire Line
+	950  3800 1450 3800
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5FF44FD7
+P 1750 2200
+F 0 "#FLG01" H 1750 2275 50  0001 C CNN
+F 1 "PWR_FLAG" H 1750 2373 50  0000 C CNN
+F 2 "" H 1750 2200 50  0001 C CNN
+F 3 "~" H 1750 2200 50  0001 C CNN
+	1    1750 2200
+	1    0    0    -1  
+$EndComp
+Connection ~ 1750 2200
+Connection ~ 950  2200
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5FF45B0F
+P 2700 3800
+F 0 "#FLG02" H 2700 3875 50  0001 C CNN
+F 1 "PWR_FLAG" H 2700 3973 50  0000 C CNN
+F 2 "" H 2700 3800 50  0001 C CNN
+F 3 "~" H 2700 3800 50  0001 C CNN
+	1    2700 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 3800 2200 3800
+Connection ~ 2200 3800
+Text Label 1000 3600 0    50   ~ 0
+~EN
+Text Label 2600 3200 0    50   ~ 0
+SW_GND
+Text Label 3900 2800 0    50   ~ 0
+EL_VA
+Text Label 3900 2900 0    50   ~ 0
+EK_VB
+Text Label 4250 2200 0    50   ~ 0
+HVDC
+Text Label 3650 2500 0    50   ~ 0
+SW
+Text Label 3650 2600 0    50   ~ 0
+CS
+Text Label 1600 3400 0    50   ~ 0
+EN
+$Comp
+L Device:R_POT_TRIM_US RV1
+U 1 1 5FF5A1B6
+P 1750 2800
+F 0 "RV1" V 1637 2800 50  0000 C CNN
+F 1 "1.2M" V 1546 2800 50  0000 C CNN
+F 2 "Potentiometer_THT:Potentiometer_Bourns_3296W_Vertical" H 1750 2800 50  0001 C CNN
+F 3 "~" H 1750 2800 50  0001 C CNN
+F 4 "Bournes" H 1750 2800 50  0001 C CNN "MFR"
+F 5 "3296W-1-125LF" H 1750 2800 50  0001 C CNN "MPN"
+	1    1750 2800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1750 2650 1750 2600
+Connection ~ 1750 2600
+NoConn ~ 1600 2800
+$Comp
+L Device:Jumper_NO_Small JP1
+U 1 1 5FF5DB43
+P 1950 2700
+F 0 "JP1" V 1904 2748 50  0000 L CNN
+F 1 "Jumper_NO_Small" H 1950 2750 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm" H 1950 2700 50  0001 C CNN
+F 3 "~" H 1950 2700 50  0001 C CNN
+	1    1950 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1750 2200 2200 2200
+Wire Wire Line
+	1750 2600 1950 2600
+Wire Wire Line
+	1900 2800 1950 2800
+Connection ~ 1950 2600
+Wire Wire Line
+	1950 2600 2300 2600
+Connection ~ 1950 2800
+Wire Wire Line
+	1950 2800 2300 2800
+$Comp
+L Connector:TestPoint_Small TP2
+U 1 1 5FF67120
+P 3650 3100
+F 0 "TP2" H 3698 3146 50  0000 L CNN
+F 1 "TestPoint_Small" H 3698 3055 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 3850 3100 50  0001 C CNN
+F 3 "~" H 3850 3100 50  0001 C CNN
+	1    3650 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 3650 3200
+Wire Wire Line
+	3650 3200 3150 3200
+Wire Wire Line
+	3650 3100 3650 3200
+$Comp
+L Connector:TestPoint_Small TP1
+U 1 1 5FF6882D
+P 4500 2100
+F 0 "TP1" H 4548 2146 50  0000 L CNN
+F 1 "TestPoint_Small" H 4548 2055 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 4700 2100 50  0001 C CNN
+F 3 "~" H 4700 2100 50  0001 C CNN
+	1    4500 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2100 4500 2200
+Connection ~ 4500 2200
+$EndSCHEMATC
